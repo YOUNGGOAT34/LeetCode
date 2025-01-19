@@ -1,12 +1,5 @@
-def count(n):
-    res=0
+from collections import defaultdict
 
-    while n>0:
-        res+=1&n
+count=defaultdict(int);
 
-        n=n>>1
-
-    return res
-
-print(count(3))
-#git push -u origin main
+print(defaultdict)
