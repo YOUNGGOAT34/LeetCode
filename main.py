@@ -1,5 +1,3 @@
-from collections import defaultdict
+array=[1,2]
 
-count=defaultdict(int);
-
-print(defaultdict)
+print(len(array))
