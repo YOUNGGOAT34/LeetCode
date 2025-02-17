@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def constructDistancedSequence(self, n: int) -> List[int]:
         res=[0]*(n*2-1)
