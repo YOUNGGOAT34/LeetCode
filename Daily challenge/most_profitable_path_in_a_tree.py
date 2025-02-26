@@ -1,3 +1,7 @@
+from collections import defaultdict, deque
+from typing import List
+
+
 class Solution:
     def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
         #build the adjacency list
