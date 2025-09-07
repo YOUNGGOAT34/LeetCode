@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<stdbool.h>
 
+bool contains(int *nums,int target,int size){
+    for(int i=0;i<size;i++){
+        if(nums[i]==target) return true;
+    }
 
-bool contains(int *array,int size,int target){
-   for(int i=0;i<size;i++){
-     if(array[i]==target) return true;
-   }
-   return false;
+    return false;
 }
 
 int findClosestNumber(int* nums, int numsSize) {
@@ -16,9 +16,11 @@ int findClosestNumber(int* nums, int numsSize) {
             closest=nums[i];
         }
     }
-    if(closest<0&&contains(nums,numsSize,abs(closest))){
-        return abs(closest);
+
+    if(closest<0 && contains(nums,abs(closest),numsSize)){
+       return abs(closest);
     }
+
     return closest;
 }
 
