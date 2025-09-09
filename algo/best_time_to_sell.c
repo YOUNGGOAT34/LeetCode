@@ -1,17 +1,39 @@
 #include<stdio.h>
 
+// int maxProfit(int* prices, int pricesSize) {
+   // int max_profit=0;
+
+   // for(int i=0;i<pricesSize;i++){
+        
+   //      for(int j=i+1;j<pricesSize;j++){
+
+   //          int profit=prices[j]-prices[i];
+   //          if(profit>max_profit){
+   //               max_profit=profit;
+   //          }
+
+   //      }
+   // }
+
+   // return max_profit;
+
+
+// }
+
+
 int maxProfit(int* prices, int pricesSize) {
    int max_profit=0;
-
-   for(int i=0;i<pricesSize;i++){
-        
-        for(int j=i+1;j<pricesSize;j++){
-
-            int profit=prices[j]-prices[i];
-            if(profit>max_profit){
-                 max_profit=profit;
+   int min_buy=prices[0];
+   
+   for(int i=1;i<pricesSize;i++){
+        if(prices[i]<min_buy){
+            min_buy=prices[i];
+        }else{
+           
+          
+            if(prices[i]-min_buy>max_profit){
+               max_profit=prices[i]-min_buy;
             }
-
         }
    }
 
