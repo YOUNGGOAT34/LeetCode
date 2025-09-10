@@ -59,7 +59,7 @@
 */
 int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
       
-   int *ret=malloc(sizeof(int)*numsSize);
+   // int *ret=malloc(sizeof(int)*numsSize);
    int *prefix=malloc(sizeof(int)*numsSize);
    int *suffix=malloc(sizeof(int)*numsSize);
    *returnSize=numsSize;
@@ -81,11 +81,11 @@ int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
    }
 
    for(int i=0;i<numsSize;i++){
-       ret[i]=suffix[i]*prefix[i];
+       suffix[i]=suffix[i]*prefix[i];
    }
 
 
    free(prefix);
-   free(suffix);
-   return ret;
+   // free(suffix);
+   return suffix;
 }
