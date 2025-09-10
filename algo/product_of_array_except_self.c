@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+//brute force solution;
 int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
       
    int *ret=malloc(sizeof(int)*numsSize);
