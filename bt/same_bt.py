@@ -20,6 +20,3 @@ class Solution:
 
         return self.same(p.right,q.right) and self.same(p.left,q.left)
 
-
-
-        
