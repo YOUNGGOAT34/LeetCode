@@ -12,6 +12,7 @@ class Solution:
 
             currSum+=root.val
 
+
             if not root.left and not root.right:
                 return currSum==targetSum
 
