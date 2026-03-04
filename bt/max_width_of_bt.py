@@ -8,7 +8,6 @@ class Solution:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
 
         q=deque([(root,0)])
-       
         res=0
         while q:
 
