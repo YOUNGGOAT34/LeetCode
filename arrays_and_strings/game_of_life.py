@@ -32,30 +32,34 @@ class Solution:
 
         for row in range(m):
             for col in range(n):
+                neighbours=helper(row,col)
                 if board[row][col]:
-                    if helper(row,col)>3:
+                    if neighbours>3:
                         board[row][col]=2
 
-                    elif helper(row,col) in [2,3]:
+                    elif neighbours in [2,3]:
                         board[row][col]=3
-                    elif helper(row,col)<2:
+                    elif neighbours<2:
                         board[row][col]=2
 
                 else:
-                    if helper(row,col)==3:
+                    if neighbours==3:
                         board[row][col]=-1
 
 
         for row in range(m):
             for col in range(n):
-                if board[row][col]>0:
+                if board[row][col]:
+                    
                     if board[row][col]==2:
                         board[row][col]=0
                     elif board[row][col]==3:
                         board[row][col]=1
 
-                elif board[row][col]==-1:
-                    board[row][col]=1
+                    elif board[row][col]==-1:
+                        board[row][col]=1
+
+
 
 
 
