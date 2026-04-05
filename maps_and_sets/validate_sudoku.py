@@ -5,17 +5,17 @@ class Solution:
         for row in range(9):
             seen=set()
             for col in range(9):
-                cell=board[col][row]
+                cell=board[row][col]
                 if cell in seen:
                     return False
                 if cell !=".":
                     seen.add(cell)
 
         #validate cols
-        for row in range(9):
+        for col in range(9):
             seen=set()
-            for col in range(9):
-                    cell=board[col][row]
+            for row in range(9):
+                    cell=board[row][col]
 
                     if cell in seen:
                         return False
